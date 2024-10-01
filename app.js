@@ -67,3 +67,39 @@ console.log("Numbers from 1 to 5:");
 for (let i = 1; i <= 5; i++) {
     console.log(i);
 }
+
+/ d. Loops
+
+// For loop to print numbers 1 to 5
+console.log("Numbers from 1 to 5:");
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+
+// e. Functional Programming
+
+// i. Function to determine if a number is odd or even
+function isEven(num) {
+    return num % 2 === 0;
+}
+
+// ii. Function to determine if a number is prime
+function isPrime(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+// iii. Function to determine if a string is a palindrome
+function isPalindrome(str) {
+    const reversed = str.split('').reverse().join('');
+    return str === reversed;
+}
+
+// Testing the functions
+console.log(`${number} is ${isEven(number) ? "even" : "odd"}.`);
+console.log(`${number} is ${isPrime(number) ? "a prime" : "not a prime"} number.`);
+let testString = "racecar";
+console.log(`Is "${testString}" a palindrome? ${isPalindrome(testString) ? "Yes" : "No"}.`);
